@@ -47,7 +47,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/categories-1.jpg" />
+                  src="@/assets/img/categories-1.jpg" />
               </div>
             </a>
 
@@ -70,7 +70,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/categories-2.jpg" />
+                  src="@/assets/img/categories-2.jpg" />
               </div>
             </a>
 
@@ -93,7 +93,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/categories-3.jpg" />
+                  src="@/assets/img/categories-3.jpg" />
               </div>
             </a>
 
@@ -116,7 +116,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/categories-4.jpg" />
+                  src="@/assets/img/categories-4.jpg" />
               </div>
             </a>
 
@@ -145,7 +145,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/items-1.jpg" />
+                  src="@/assets/img/items-1.jpg" />
               </div>
             </a>
 
@@ -168,7 +168,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/items-2.jpg" />
+                  src="@/assets/img/items-2.jpg" />
               </div>
             </a>
 
@@ -191,7 +191,7 @@
               <div class="m-4 overflow-hidden rounded-xl">
                 <img alt="Placeholder"
                   class="block w-full h-auto"
-                  src="img/items-3.jpg" />
+                  src="@/assets/img/items-3.jpg" />
               </div>
             </a>
 
