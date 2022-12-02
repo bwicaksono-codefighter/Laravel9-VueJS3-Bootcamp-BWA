@@ -11,7 +11,7 @@ const categories = ref([
 </script>
 
 <template>
-    <div class="container px-4 mx-auto my-16 md:px-12">
+    <div class="container px-4 mx-auto my-16 md:px-12" id="categories">
         <h2 class="mb-4 text-xl font-medium md:mb-0 md:text-lg">Top Categories</h2>
         <div class="flex flex-wrap -mx-1 lg:-mx-4">
             <!-- <div class="w-full px-1 my-1 md:w-1/2 lg:my-4 lg:px-4 lg:w-1/4">

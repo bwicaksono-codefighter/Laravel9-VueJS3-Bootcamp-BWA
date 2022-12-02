@@ -16,6 +16,7 @@ const items = ref([
         <div class="flex flex-wrap -mx-1 lg:-mx-4">
             <!-- Items Card -->
             <ItemCard v-for="item in items"
+                :id="item.id"
                 :key="item.id"
                 :title="item.title"
                 :description="item.description"
