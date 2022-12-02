@@ -1,5 +1,5 @@
 <script setup>
-import CategoriesCard from '@/components/CategoriesCard.vue'
+import CategoryCard from '@/components/CategoryCard.vue'
 import { ref } from 'vue'
 
 const categories = ref([
@@ -108,7 +108,7 @@ const categories = ref([
             </div> -->
 
             <!-- CategoriesCard -->
-            <CategoriesCard v-for="category in categories"
+            <CategoryCard v-for="category in categories"
                 :key="category.id"
                 :title="category.title"
                 :count="category.count"
