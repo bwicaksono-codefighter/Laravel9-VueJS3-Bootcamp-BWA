@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-        id="mobile-menu-2">
+        id="mobile-menu">
         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-regular">
             <li>
                 <RouterLink to="/"
