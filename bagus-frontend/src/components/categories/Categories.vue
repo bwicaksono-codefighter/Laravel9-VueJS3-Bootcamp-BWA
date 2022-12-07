@@ -5,32 +5,16 @@ import { ref, onMounted } from 'vue'
 // Data kosong
 const categories = ref([]);
 
-// Ambil Data Categories - Dengan Promise
-// function getCategoriesData(params) {
-//     axios.get('https://zullkit-backend.buildwithangga.id/api/categories')
-//     .then(function (response) {
-//     // handle success
-//     console.log(response);
-//   });    
-// }
-
 // Ambil Data Categories - Dengan Asyn Await
 async function getCategoriesData(params) {
     try {
-        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?show_product=1&limit=4');
+        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?show_product=1');
         // console.log(response.data);
         categories.value = response.data.data.data
     } catch (error) {
         console.error(error);
     }
 }
-
-// const categories = ref([
-//     { id: 1, title: 'Mobile UI Kit', count: 731, image: 'categories-1.jpg' },
-//     { id: 2, title: 'Fonts', count: 657, image: 'categories-2.jpg' },
-//     { id: 3, title: 'Icon Set', count: 83559, image: 'categories-3.jpg' },
-//     { id: 4, title: 'Website UI Kit', count: 4500, image: 'categories-4.jpg' }
-// ])
 
 onMounted(() => {
     getCategoriesData();

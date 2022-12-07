@@ -2,10 +2,14 @@
 import { RouterLink } from 'vue-router'
 
 defineProps({
+    id: Number,
     title: String,
     image: String,
     count: Number
 })
+
+// tidak perlu seperti ini lgi
+// :src="'/src/assets/img/' + image" />
 
 </script>
 
@@ -16,14 +20,14 @@ defineProps({
                 <div class="m-4 overflow-hidden rounded-xl">
                     <img alt="Placeholder"
                         class="block w-full h-auto"
-                        :src="'/src/assets/img/' + image" />
+                        :src="image" />
                 </div>
             </RouterLink>
 
             <header class="px-4 mb-4 leading-tight">
                 <h1 class="text-lg">
                     <RouterLink class="font-semibold text-black no-underline hover:underline"
-                        to="#">
+                        :to="{name: 'category-items', params: {id: id}}">
                         {{title}}
                     </RouterLink>
                 </h1>
