@@ -7,7 +7,7 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 // Data kosong
-const item = ref([]);
+const items = ref([]);
 
 // Nama CAtegory
 const category = ref({});
@@ -15,12 +15,13 @@ const category = ref({});
 // Ambil Data Products - Dengan Asyn Await
 async function getItemsData(params) {
     try {
-        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?id='+ route.params.id);
+        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?id='+ route.params.id +'&show_product=1');
         // console.log(response.data);
         // item.value = response.data.data.products
 
         // category
-        item.value = response.data.data
+        items.value = response.data.data.products
+        category.value = response.data.data
     } catch (error) {
         console.error(error);
     }
@@ -30,13 +31,6 @@ onMounted(() => {
     getItemsData();
 })
 
-
-// const items = ref([
-//     { id: 1, title: 'Mobile UI Kit', description: "Mobile UI Kit", image: 'items-1.jpg' },
-//     { id: 2, title: 'Online Doctor Consultation', description: "Website UI Kit", image: 'items-2.jpg' },
-//     { id: 3, title: 'Banking Crypto', description: "Mobile UI Kit", image: 'items-3.jpg' },
-
-// ])
 </script>
 
 <template>
