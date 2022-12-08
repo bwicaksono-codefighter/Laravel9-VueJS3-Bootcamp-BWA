@@ -7,7 +7,7 @@ import { useRoute } from 'vue-router';
 const route = useRoute();
 
 // Data kosong
-const items = ref([]);
+const item = ref([]);
 
 // Nama CAtegory
 const category = ref({});
@@ -15,12 +15,12 @@ const category = ref({});
 // Ambil Data Products - Dengan Asyn Await
 async function getItemsData(params) {
     try {
-        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?id='+ route.params.id +'&show_product=1');
+        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?id='+ route.params.id);
         // console.log(response.data);
-        items.value = response.data.data.products
+        // item.value = response.data.data.products
 
         // category
-        category.value = response.data.data
+        item.value = response.data.data
     } catch (error) {
         console.error(error);
     }

@@ -17,7 +17,7 @@ const categories = ref([]);
 // Ambil Data Categories - Dengan Asyn Await
 async function getCategoriesData(params) {
     try {
-        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?show_product=1&limit=4');
+        const response = await axios.get('https://zullkit-backend.buildwithangga.id/api/categories?limit=4');
         // console.log(response.data);
         categories.value = response.data.data.data
     } catch (error) {
