@@ -1,7 +1,19 @@
 <script setup>
+import { onMounted, computed } from 'vue';
+import { useUserStore } from '@/stores/user';
+
 import Logo from './Logo.vue'
 import NavigationLinks from './NavigationLinks.vue'
 import AuthButton from './AuthButton.vue'
+
+// Cara pakai store
+const userStore = useUserStore()
+
+const getUser = computed(() => userStore.getUser)
+const isLoggedIn = computed(() => userStore.isLoggedIn)
+
+const user = computed(() => userStore.user)
+
 </script>
 
 <template>
