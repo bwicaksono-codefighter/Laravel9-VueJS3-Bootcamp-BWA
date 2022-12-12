@@ -1,4 +1,4 @@
-import { defineStore } from "pinia";
+import { defineStore } from "pinia"
 
 export const useUserStore = defineStore({
     id: "user",
@@ -7,21 +7,20 @@ export const useUserStore = defineStore({
     }),
     getters: {
         isLoggedIn: (state) => state.user !== false,
-        getUser: (state) => state.getUser
+        getUser: (state) => state.user
     },
     actions: {
         async fetchUser() {
             try {
-                const {data} = await axios.get("https://zullkit-backend.buildwithangga.id/api/user", {
+                const { data } = await axios.get('https://zullkit-backend.buildwithangga.id/api/user', {
                     headers: {
-                        Authorization: localStorage.getItem('token_type') + '' + localStorage.getItem('access_token')
+                        Authorization: localStorage.getItem('token_type') + ' ' + localStorage.getItem('access_token')
                     }
                 })
                 this.user = data
             } catch (error) {
                 this.user = false
             }
-            
         }
     }
 })

@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue'
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRouter } from 'vue-router'
+
+import { useUserStore }  from '@/stores/user'
+
+const userStore = useUserStore()
+const router = useRouter()
 
 const form = ref({
     email: '',
@@ -16,13 +21,16 @@ async function login() {
             {
                 email: form.value.email,
                 password: form.value.password
-            });
+            })
         // console.log(response);
         // Simpan ke localStorage
         localStorage.setItem('access_token', response.data.data.access_token)
         localStorage.setItem('token_type', response.data.data.token_type)
+
+        userStore.fetchUser()
+        router.push('/')
     } catch (error) {
-        console.error(error);
+        console.error(error)
     }
 }
 </script>
