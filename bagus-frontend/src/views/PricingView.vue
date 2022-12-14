@@ -3,6 +3,14 @@ import { RouterLink } from 'vue-router';
 import Customizable from '@/components/authentication/features/Customizable.vue'
 import Fortune from '@/components/authentication/features/Fortune.vue'
 import Documentation from '@/components/authentication/features/Documentation.vue'
+
+async function checkout() {
+    try {
+        const response = await axios.post('https://zullkit-backend.buildwithangga.id/api/checkout')
+    } catch (error) {
+        
+    }
+}
 </script>
 
 <template>

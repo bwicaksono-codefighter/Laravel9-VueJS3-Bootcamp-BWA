@@ -1,10 +1,13 @@
 <script setup>
-import { RouterLink } from 'vue-router'    
+import { RouterLink } from 'vue-router'
+const props = defineProps({
+    user: Object
+})
 </script>
 
 <template>
     <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
-        id="mobile-menu">
+        id="mobile-menu-1">
         <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-regular">
             <li>
                 <RouterLink to="/"
@@ -27,5 +30,5 @@ import { RouterLink } from 'vue-router'
                     Study Case</RouterLink>
             </li>
         </ul>
-    </div>
+    </div>   
 </template>
