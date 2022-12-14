@@ -1,12 +1,15 @@
 <script setup>
 import { RouterLink } from 'vue-router';
-import Customizable from '@/components/authentication/features/Customizable.vue'
-import Fortune from '@/components/authentication/features/Fortune.vue'
-import Documentation from '@/components/authentication/features/Documentation.vue'
 
-async function checkout() {
+import FeatureLists from '@/components/authentication/FeatureList.vue'
+
+async function checkout(price) {
     try {
-        const response = await axios.post('https://zullkit-backend.buildwithangga.id/api/checkout')
+        const response = await axios.post('https://zullkit-backend.buildwithangga.id/api/checkout', {
+            payment_total: price,
+            payment_status: 'PENDING'
+        })
+        windows.location.href = response.data.data.payment_url
     } catch (error) {
         
     }
